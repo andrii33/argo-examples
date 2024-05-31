@@ -1,5 +1,7 @@
 appName: myhelmapp
 
+namespace: test-argocd
+
 port: 80
 
 configmap:
@@ -8,5 +10,5 @@ configmap:
     CUSTOM_HEADER: 'This app was deployed with helm!'
 
 image:
-  name: devopsjourney1/mywebapp
+  name: mywebapp
   tag: latest
