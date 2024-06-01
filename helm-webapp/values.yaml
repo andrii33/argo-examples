@@ -11,4 +11,4 @@ configmap:
 
 image:
   name: andrii33/test
-  tag: latest
+  tag: 0.0.1
