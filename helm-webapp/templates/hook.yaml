@@ -3,7 +3,7 @@ kind: Job
 metadata:
   generateName: deploy-test-
   annotations:
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: Ignore
 spec:
   template:
