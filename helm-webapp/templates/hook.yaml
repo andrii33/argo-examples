@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: deploy-test-
+  namespace: {{ .Values.namespace }}
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: Ignore
@@ -16,4 +17,6 @@ spec:
           - "-c"
           - "./deploy/deploy.sh"
       restartPolicy: Never
+      imagePullSecrets:
+        - name: ecr-registry-secret
   backoffLimit: 2
