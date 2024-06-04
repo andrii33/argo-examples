@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: deploy-test-msg
-        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.HookImage.name }}:{{ .Values.HookImage.tag }}"
         command:
           - "sh"
           - "-c"
